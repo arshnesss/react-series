@@ -1,0 +1,11 @@
+=>React doesn’t work directly with the browser’s real DOM all the time. Instead, it creates its own version of it first called the Virtual DOM,
+
+=>It's a copy of the real DOM, kept in memory by React.
+
+=>When things change (like a button is clicked), React updates the virtual DOM first.
+
+=>Then it compares the virtual DOM to the real DOM.
+
+=> In the customReact file we craeted, In your code, you made a small custom version of React’s rendering logic:
+You built your own mini virtual DOM as a JS object:
+And you wrote a function to turn it into real DOM on the page. That’s literally what React does internally — just at a much bigger scale.
