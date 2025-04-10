@@ -9,3 +9,30 @@
 => In the customReact file we craeted, In your code, you made a small custom version of React’s rendering logic:
 You built your own mini virtual DOM as a JS object:
 And you wrote a function to turn it into real DOM on the page. That’s literally what React does internally — just at a much bigger scale.
+
+=> Real DOM (also called Browser DOM)
+This is the actual webpage shown in the browser.
+
+=> Virtual DOM
+A copy of the real DOM, created by React (or other frameworks).
+It's just a JavaScript object — faster and easier to update.
+
+=> Reconciliation is the process React uses to figure out what changed in the UI and update the page efficiently.It’s a diffing algorithm — which means:
+
+It compares the new Virtual DOM with the old one to find the minimum number of changes needed to update the real DOM.
+
+=> When we call the setState(), React sees that the state has changed.It re-runs the component function (e.g., your App()), and creates a new Virtual DOM from the updated JSX.
+
+Then comes the Reconciliation Algorithm 🧠:
+React compares the new Virtual DOM with the previous one.
+It finds the differences.React updates the Real DOM only at the changed places, not the whole thing.
+
+=> React Fiber is the internal engine of React —
+It controls how rendering works under the hood — especially things like:
+
+Reconciliation
+Rendering priority
+Interrupting work
+Smooth updates
+
+=> Props let you customize each instance of the component.
