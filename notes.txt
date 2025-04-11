@@ -36,3 +36,16 @@ Interrupting work
 Smooth updates
 
 => Props let you customize each instance of the component.
+
+=> useCallback is a React Hook that remembers a function so it doesn't get recreated on every render.
+If you wrap that function using useCallback, React will remember the function between renders unless something it's using (like the count) changes.
+
+So now, when the parent re-renders but the function is the same, the child doesn’t re-render unnecessarily.
+
+=> useEffect watches for changes and says:
+"Hey, something changed — let's do some side job now (like log, fetch, update DOM)"
+
+And because the component re-renders (which useEffect may trigger or respond to)...
+
+useCallback steps in and says:
+"Hey, don’t rebuild this function unless something I depend on has changed!"
